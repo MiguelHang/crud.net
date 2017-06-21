@@ -1,0 +1,27 @@
+<div class="col-md-12">
+	<button class="btn-success btn">Crear código de descuento</button>
+</div><br>
+<div class="col-md-12">
+	<ul class="list-group">
+	  <li class="list-group-item" ng-repeat="codigo in codigos | limitTo:page">
+			<div class="col-md-6">
+			  <p><b>Codigo: </b>{{codigo.codigo}}</p>
+			  <p ng-if="view"><b>Caduca el: </b>{{codigo.caducidad | date: 'dd-MM-yyyy'}}</p>
+			  <p ng-if="view"><b>Tipo de descuento: </b>{{codigo.tipoDescuento}}</p>
+			  <p ng-if="view"><b>Descuento: </b>{{codigo.descuento}}</p>
+			  <p ng-if="view"><b>Usos posibles: </b>{{codigo.usosPosibles}}</p>
+			  <p ng-if="view"><b>Usos Bloqueados: </b>{{codigo.usosBloqueados}}</p>
+			  <p ng-if="view"><b>Usos Consumidos: </b>{{codigo.usosConsumidos}}</p>
+			</div>
+		  <div class="text-right col-md-6">
+		  	<button class="btn btn-primary" ng-click="view=!view">Detalle</button>
+		  	<button class="btn btn-warning " ng-click="modigicar(codigo.id, $index)">modificar</button>
+		  	<button class="btn btn-danger " ng-click="eliminar(codigo.id, $index)">eliminar</button>
+		  </div>
+	  </li>
+	</ul>
+	<div class="text-center col-md-12">
+		<button class="btn btn-link" ng-click="rePage()" ng-if="page>5">Ver menos</button>
+		<button class="btn btn-link" ng-click="avPage()">Ver más</button>
+	</div>
+</div>
