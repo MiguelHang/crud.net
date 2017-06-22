@@ -1,0 +1,38 @@
+<div class="col-md-12">
+  <div class="col-md-8 col-md-offset-2">
+    <form>
+      <div class="form-group">
+        <label>Codigo:</label>
+        <input type="text" class="form-control" ng-model="codigo.codigo">
+      </div>
+      <div class="form-group">
+        <label>Fecha de caducidad:</label>
+        <input type="date" class="form-control" ng-model="codigo.caducidad">
+      </div>
+      <div class="form-group">
+        <label>Tipo de descuento:</label>
+        <select class="form-control" ng-model="codigo.tipoDescuento">
+          <option>1</option>
+          <option>2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Descuento:</label>
+        <input type="number" class="form-control" ng-model="codigo.descuento">
+      </div>
+      <div class="form-group">
+        <label>Usos posibles:</label>
+        <input type="number" class="form-control" ng-model="codigo.usosPosibles">
+      </div>
+      <div class="form-group">
+        <label>Usos Bloqueados:</label>
+        <input type="number" class="form-control" ng-model="codigo.usosBloqueados">
+      </div>
+      <div class="form-group">
+        <label>Usos consumidos:</label>
+        <input type="number" class="form-control" ng-model="codigo.usosConsumidos">
+      </div>
+      <button type="submit" class="btn btn-default" ng-click="guardar()">Guardar</button>
+    </form>
+  </div>
+</div>

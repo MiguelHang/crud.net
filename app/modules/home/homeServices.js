@@ -12,8 +12,8 @@
 			})
 		}
 		this.postCodigo = param => {
-			let urlPost = url + ''
-			return $http.post(urlPost).then( response => {
+			let urlPost = url + 'creacodigosdescuento'
+			return $http.post(urlPost, param).then( response => {
 				return response.data
 			})
 		}

@@ -22,5 +22,9 @@
 	$scope.rePage = () => {
 		$scope.page = $scope.page - 5
 	}
+
+	$scope.crearCodigo = () => {
+		$state.go('crear')
+	}
 }
 })();
